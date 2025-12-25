@@ -18,11 +18,11 @@ class UserModel {
   factory UserModel.fromJson(Map<String, dynamic> json) {
     return UserModel(
       id: json['id'] ?? '',
-      name: json['id'] ?? '',
-      email: json['id'] ?? '',
-      address: json['id'] ?? '',
-      phoneNumber: json['id'] ?? '',
-      city: json['id'] ?? '',
+      name: json['name'] ?? '',
+      email: json['email'] ?? '',
+      address: json['address'] ?? '',
+      phoneNumber: json['phoneNumber'] ?? '',
+      city: json['city'] ?? '',
     );
   }
 }
