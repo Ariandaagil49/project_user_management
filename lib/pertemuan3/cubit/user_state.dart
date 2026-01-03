@@ -1,6 +1,6 @@
-import 'package:belajar_user_management/pertemuan3/Data/models/user_model.dart';
-// import 'package:belajar_user_management/pertemuan2/cubit/user_state.dart';
-import 'package:belajar_user_management/pertemuan3/Data/models/city_model.dart';
+import 'package:belajar_user_management/pertemuan3/data/models/user_model.dart';
+// import 'package:belajar_user_management/pertemuan3/cubit/user_state.dart';
+import 'package:belajar_user_management/pertemuan3/data/models/city_model.dart';
 import 'package:equatable/equatable.dart';
 
 abstract class UserState extends Equatable {

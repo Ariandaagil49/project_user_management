@@ -1,16 +1,17 @@
-import 'package:belajar_user_management/pertemuan3/Data/datasources/user_remote_data_source.dart';
-import 'package:belajar_user_management/pertemuan3/Data/models/city_model.dart';
-import 'package:belajar_user_management/pertemuan3/Data/models/user_model.dart';
+import 'package:belajar_user_management/pertemuan3/data/datasources/user_remote_data_source.dart';
+import 'package:belajar_user_management/pertemuan3/data/models/city_model.dart';
 
+import '../models/user_model.dart';
+// import '../models/user_model.dart';
 abstract class UserRepository {
   Future<List<UserModel>> getUsers();
   Future<UserModel> addUser(UserModel user);
   Future<List<CityModel>> getCities();
 }
 
-class UserReporsitoryImpl implements UserRepository {
+class UserRepositoryImpl implements UserRepository {
   final UserRemoteDataSource dataSource;
-  UserReporsitoryImpl({required this.dataSource});
+  UserRepositoryImpl({required this.dataSource});
 
   @override
   Future<List<UserModel>> getUsers() async {

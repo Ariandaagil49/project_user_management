@@ -1,9 +1,9 @@
 import 'package:belajar_user_management/pertemuan3/cubit/user_state.dart';
-import 'package:belajar_user_management/pertemuan3/Data/models/city_model.dart';
-import 'package:belajar_user_management/pertemuan3/Data/models/user_model.dart';
-import 'package:belajar_user_management/pertemuan3/Data/repositories/user_repository.dart';
+import 'package:belajar_user_management/pertemuan3/data/models/city_model.dart';
+import 'package:belajar_user_management/pertemuan3/data/models/user_model.dart';
+import 'package:belajar_user_management/pertemuan3/data/repositories/user_repository.dart';
 import 'package:bloc/bloc.dart';
-import 'package:equatable/equatable.dart';
+// import 'package:equatable/equatable.dart';
 
 // part 'user_state.dart';
 

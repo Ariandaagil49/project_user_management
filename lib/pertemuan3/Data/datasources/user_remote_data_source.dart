@@ -1,9 +1,9 @@
 import 'dart:convert';
-import 'package:belajar_user_management/pertemuan3/Data/models/city_model.dart';
-import 'package:belajar_user_management/pertemuan3/Data/models/user_model.dart';
+import 'package:belajar_user_management/pertemuan3/data/models/city_model.dart';
+import 'package:belajar_user_management/pertemuan3/data/models/user_model.dart';
 import 'package:belajar_user_management/pertemuan3/config/api_config.dart';
-import 'package:belajar_user_management/pertemuan3/config/api_longger.dart';
-import 'package:http/http.dart';
+import 'package:belajar_user_management/pertemuan3/config/api_logger.dart';
+import 'package:http/http.dart' as http;
 
 abstract class UserRemoteDataSource {
   Future<List<UserModel>> getUsers();
@@ -29,7 +29,7 @@ class UserRemoteDataSourceImpl implements UserRemoteDataSource {
         response: response,
       );
 
-      if (response.statuscode == 200) {
+      if (response.statusCode == 200) {
         final List<dynamic> jsonList = json.decode(response.body);
         return jsonList.map((json) => UserModel.fromJson(json)).toList();
       } else {
@@ -56,7 +56,7 @@ class UserRemoteDataSourceImpl implements UserRemoteDataSource {
         requestBody: json.encode(user.toJson()),
       );
 
-      if (response.statusCode == 201 || response.statuscode == 200) {
+      if (response.statusCode == 201 || response.statusCode == 200) {
         return UserModel.fromJson(json.decode(response.body));
       } else {
         throw Exception('Failed to add user: ${response.statusCode}');
